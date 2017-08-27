@@ -1,0 +1,27 @@
+﻿@model OgeFirst.ViewModels.ResultsViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h1>@Model.Title</h1>
+
+@for (int i = 0; i < Model.CheckedAnswers.Count; i++)
+    {
+        <section>
+            @Html.Raw(Model.CheckedAnswers[i].Text)
+
+            <table>
+                <tr>
+                    <td>Ваш ответ:</td>
+                    <td>@Model.CheckedAnswers[i].StudentAnswer</td>
+                    <td rowspan="2" class="@Model.CheckedAnswers[i].ResultCss">@Model.CheckedAnswers[i].Result</td>
+                </tr>
+                <tr>
+                    <td>Правильный ответ:</td>
+                    <td>@Model.CheckedAnswers[i].RightAnswer</td>
+                </tr>
+            </table>
+        </section>
+     }
+

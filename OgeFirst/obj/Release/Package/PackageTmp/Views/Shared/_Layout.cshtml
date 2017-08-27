@@ -1,0 +1,24 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Stylesheets/layout.css" />
+    <link rel="stylesheet" href="~/Stylesheets/colors.css" />
+    <link rel="stylesheet" href="~/Stylesheets/typography.css" />
+    <link rel="stylesheet" href="~/Stylesheets/specials.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
+</head>
+<body>
+    <header>
+        @Html.ActionLink("ОГЭ по математике", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    </header>
+    <main>
+        @RenderBody()
+
+       
+    </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 95%;
+}
+
+li, td {
+    padding: 10px;
+}
+
+h1, ol {
+    text-align: center;
+}
+
+iframe{
+    display: block;
+    margin: 30px auto;
+}
+
+main {
+    margin: 30px auto;
+    list-style-position: inside;
+    width: 80%;
+    max-width: 1080px;
+}
+
+section {
+    padding: 10px 0px 30px 30px;
+    max-width: 750px;
+    margin: 10px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0px 80px;
+}
+
+nav li {
+    display: inline;
+    list-style: none;  
+}
+
+header a {
+    margin: 20px 30px
+}
+
+label {
+    padding-bottom: 50px;
+}

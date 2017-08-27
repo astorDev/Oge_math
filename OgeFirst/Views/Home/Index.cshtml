@@ -1,0 +1,18 @@
+﻿@model OgeFirst.ViewModels.SubtopicsListViewModel
+
+@{
+    ViewBag.Title = "ОГЭ по математике - онлайн курсы";
+}
+
+<h1>Сдаёшь ОГЭ по математике?</h1>
+<p>Я подготовил для тебя видеоуроки и тесты по различным заданиям экзамена.</p>
+<h2>Разобранные темы из ОГЭ:</h2>
+
+<ul>
+    @foreach(var subtopic in Model.Subtopics)
+    {
+        <li>@Html.ActionLink(subtopic.FullName, "Index", "Subtopics", new { id = subtopic.SubtopicId}, null)</li>
+    }
+</ul>
+
+

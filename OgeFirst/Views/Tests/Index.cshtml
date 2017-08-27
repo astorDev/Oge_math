@@ -1,0 +1,34 @@
+﻿@model OgeFirst.ViewModels.TestViewModel
+
+@{
+    ViewBag.Title = Model.Title + " (ОГЭ)";
+}
+
+<h1>@Model.Title</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "incorrect" })
+
+    for (int i = 0; i < Model.Questions.Count; i++)
+    {
+        <section>
+            @Html.ValidationSummary(true, "", new { @class = "incorrect" })
+            @Html.Raw(Model.Questions[i].Text)
+
+            <div class="form-group">
+                @Html.HiddenFor(model => model.Questions[i].Id)
+                @Html.HiddenFor(model => model.TopicId)
+                <label>Ваш ответ: </label>
+                <div>
+                    @Html.EditorFor(model => model.Questions[i].StudentAnswer, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Questions[i].StudentAnswer, "", new { @class = "incorrect" })
+                </div>
+            </div>
+        </section>
+    }
+
+    <input type="submit" value="Сдать тест" class="btn btn-default" />
+}

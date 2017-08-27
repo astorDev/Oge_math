@@ -1,0 +1,13 @@
+﻿@model OgeFirst.ViewModels.SubtopicViewModel
+@using OgeFirst.ViewModels
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<h1>@Model.Name</h1>
+
+<p>@Html.Raw(Model.Description)</p>
+<iframe width="560" height="315" src="@Model.VideoLink" frameborder="0" allowfullscreen></iframe>
+
+<p>Теперь самое время пройти: @Html.ActionLink("Тест - " + Model.Name, "Index", "Tests", new { id = Model.SubtopicId, type = TestType.Subtopic}, new { @class = "btn" })</p>

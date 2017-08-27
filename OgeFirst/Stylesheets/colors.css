@@ -1,0 +1,32 @@
+:root {
+    --accent-color: #FF5722;
+    --main-color: #8BC34A
+}
+
+button, .btn {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+header {
+    background-color: var(--main-color);
+    color: white;
+}
+
+header a:visited, header a {
+    color: white;
+    text-decoration: none;
+}
+
+.correct {
+    padding-left: 30px;
+    font-weight: bold;
+    color: green;
+}
+
+.incorrect {
+    padding-left: 30px;
+    font-weight: bold;
+    color: red;
+
+}
